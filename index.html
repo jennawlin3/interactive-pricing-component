@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="./assets/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,25 +17,38 @@
   </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
+  <header>
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. No credit card required. </p>
+  </header>
+  <main>
+    <form action="#" method="post">
+    <section class="pricing-components">
+      <p><span id="number-views">100</span>k Pageviews</p>
+      <input type="range" name="pricing-range" id="" value="50" min="0" width="100">
+      <label class="price-container"><span id="price">16.00</span>/ month</label>
+      <div class="options-price">
+        <p>Monthly Billing</p>
+        <input type="checkbox" name="billing-freq" id="billing-freq">
+        <label class="toggle-switch" for="billing-freq"><span class="toggle-circle"></span></label>
+        <p class="yearly">Yearly Billing</p>
+        <p class="discount">-<span id="number-discount">25</span>%</p>
+      </div>
+    </section>
+    <section class="start-button_container">
+      <ul>
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </ul>
+      <input type="submit" value="Start my trial">
+    </section>
+  </main>
+</form>
+   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a>.
   </div>
 </body>
 </html>
